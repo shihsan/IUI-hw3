@@ -1,0 +1,34 @@
+PODS:
+  - AFNetworking (2.2.1):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.2.1):
+    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (2.2.1)
+  - AFNetworking/Security (2.2.1)
+  - AFNetworking/Serialization (2.2.1)
+  - AFNetworking/UIKit (2.2.1):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - JSONKit (1.5pre)
+  - Reachability (3.1.1)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.0)
+  - JSONKit (~> 1.4)
+  - Reachability (~> 3.0)
+
+SPEC CHECKSUMS:
+  AFNetworking: 0121f4b69be3fa58d1ab317866e036e12ac9651d
+  JSONKit: 409734ab3407fce90ef7eaa95d7168f38d9a6601
+  Reachability: be4883bb93f31e38266ae3365e5600a317aae735
+
+COCOAPODS: 0.31.1

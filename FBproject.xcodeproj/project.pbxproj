@@ -21,6 +21,15 @@
 		484ED54118E9C52900F7D71F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484ED52318E9C52900F7D71F /* UIKit.framework */; };
 		484ED54918E9C52900F7D71F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 484ED54718E9C52900F7D71F /* InfoPlist.strings */; };
 		484ED54B18E9C52900F7D71F /* FBprojectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 484ED54A18E9C52900F7D71F /* FBprojectTests.m */; };
+		484ED55518E9C6C200F7D71F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484ED55418E9C6C200F7D71F /* FacebookSDK.framework */; };
+		485F258118F02D1B00504688 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F258018F02D1B00504688 /* TableViewController.m */; };
+		48F8E9B118F451C3006340AB /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F8E9AE18F451C3006340AB /* ECSlidingViewController.m */; };
+		48F8E9B218F451C3006340AB /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F8E9B018F451C3006340AB /* UIImage+ImageWithUIView.m */; };
+		48F8E9B918F45232006340AB /* initViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F8E9B418F45232006340AB /* initViewController.m */; };
+		48F8E9BA18F45232006340AB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F8E9B618F45232006340AB /* MainViewController.m */; };
+		48F8E9BB18F45232006340AB /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F8E9B818F45232006340AB /* MenuViewController.m */; };
+		48F8E9BD18F45A74006340AB /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F8E9BC18F45A74006340AB /* FacebookSDK.framework */; };
+		C45FA310A08C4166A2C7033B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E598E6269EF64890AE656B7A /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,22 @@
 		484ED54618E9C52900F7D71F /* FBprojectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FBprojectTests-Info.plist"; sourceTree = "<group>"; };
 		484ED54818E9C52900F7D71F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		484ED54A18E9C52900F7D71F /* FBprojectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBprojectTests.m; sourceTree = "<group>"; };
+		484ED55418E9C6C200F7D71F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		485F257F18F02D1B00504688 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		485F258018F02D1B00504688 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		48F8E9AD18F451C3006340AB /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
+		48F8E9AE18F451C3006340AB /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
+		48F8E9AF18F451C3006340AB /* UIImage+ImageWithUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithUIView.h"; sourceTree = "<group>"; };
+		48F8E9B018F451C3006340AB /* UIImage+ImageWithUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithUIView.m"; sourceTree = "<group>"; };
+		48F8E9B318F45232006340AB /* initViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = initViewController.h; sourceTree = "<group>"; };
+		48F8E9B418F45232006340AB /* initViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = initViewController.m; sourceTree = "<group>"; };
+		48F8E9B518F45232006340AB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		48F8E9B618F45232006340AB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		48F8E9B718F45232006340AB /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		48F8E9B818F45232006340AB /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		48F8E9BC18F45A74006340AB /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		758EDB25E1C946F79AAE17EA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		E598E6269EF64890AE656B7A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +86,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				484ED52218E9C52900F7D71F /* CoreGraphics.framework in Frameworks */,
+				484ED55518E9C6C200F7D71F /* FacebookSDK.framework in Frameworks */,
 				484ED52418E9C52900F7D71F /* UIKit.framework in Frameworks */,
 				484ED52018E9C52900F7D71F /* Foundation.framework in Frameworks */,
+				C45FA310A08C4166A2C7033B /* libPods.a in Frameworks */,
+				48F8E9BD18F45A74006340AB /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +114,7 @@
 				484ED54418E9C52900F7D71F /* FBprojectTests */,
 				484ED51E18E9C52900F7D71F /* Frameworks */,
 				484ED51D18E9C52900F7D71F /* Products */,
+				758EDB25E1C946F79AAE17EA /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +130,13 @@
 		484ED51E18E9C52900F7D71F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				48F8E9BC18F45A74006340AB /* FacebookSDK.framework */,
+				484ED55418E9C6C200F7D71F /* FacebookSDK.framework */,
 				484ED51F18E9C52900F7D71F /* Foundation.framework */,
 				484ED52118E9C52900F7D71F /* CoreGraphics.framework */,
 				484ED52318E9C52900F7D71F /* UIKit.framework */,
 				484ED53E18E9C52900F7D71F /* XCTest.framework */,
+				E598E6269EF64890AE656B7A /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,11 +144,20 @@
 		484ED52518E9C52900F7D71F /* FBproject */ = {
 			isa = PBXGroup;
 			children = (
+				48F8E9AC18F451C3006340AB /* ECSlidingViewController */,
 				484ED52E18E9C52900F7D71F /* AppDelegate.h */,
 				484ED52F18E9C52900F7D71F /* AppDelegate.m */,
 				484ED53118E9C52900F7D71F /* Main.storyboard */,
 				484ED53418E9C52900F7D71F /* ViewController.h */,
 				484ED53518E9C52900F7D71F /* ViewController.m */,
+				48F8E9B318F45232006340AB /* initViewController.h */,
+				48F8E9B418F45232006340AB /* initViewController.m */,
+				48F8E9B518F45232006340AB /* MainViewController.h */,
+				48F8E9B618F45232006340AB /* MainViewController.m */,
+				48F8E9B718F45232006340AB /* MenuViewController.h */,
+				48F8E9B818F45232006340AB /* MenuViewController.m */,
+				485F257F18F02D1B00504688 /* TableViewController.h */,
+				485F258018F02D1B00504688 /* TableViewController.m */,
 				484ED53718E9C52900F7D71F /* Images.xcassets */,
 				484ED52618E9C52900F7D71F /* Supporting Files */,
 			);
@@ -152,6 +193,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		48F8E9AC18F451C3006340AB /* ECSlidingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				48F8E9AD18F451C3006340AB /* ECSlidingViewController.h */,
+				48F8E9AE18F451C3006340AB /* ECSlidingViewController.m */,
+				48F8E9AF18F451C3006340AB /* UIImage+ImageWithUIView.h */,
+				48F8E9B018F451C3006340AB /* UIImage+ImageWithUIView.m */,
+			);
+			path = ECSlidingViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 484ED54E18E9C52900F7D71F /* Build configuration list for PBXNativeTarget "FBproject" */;
 			buildPhases = (
+				60106DE6247F491FA6200A05 /* Check Pods Manifest.lock */,
 				484ED51818E9C52900F7D71F /* Sources */,
 				484ED51918E9C52900F7D71F /* Frameworks */,
 				484ED51A18E9C52900F7D71F /* Resources */,
+				982D7AF45401468E96F85CB7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,14 +298,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		60106DE6247F491FA6200A05 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		982D7AF45401468E96F85CB7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		484ED51818E9C52900F7D71F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48F8E9B218F451C3006340AB /* UIImage+ImageWithUIView.m in Sources */,
+				48F8E9BB18F45232006340AB /* MenuViewController.m in Sources */,
 				484ED53618E9C52900F7D71F /* ViewController.m in Sources */,
+				48F8E9B918F45232006340AB /* initViewController.m in Sources */,
+				48F8E9BA18F45232006340AB /* MainViewController.m in Sources */,
+				48F8E9B118F451C3006340AB /* ECSlidingViewController.m in Sources */,
 				484ED53018E9C52900F7D71F /* AppDelegate.m in Sources */,
 				484ED52C18E9C52900F7D71F /* main.m in Sources */,
+				485F258118F02D1B00504688 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,9 +468,15 @@
 		};
 		484ED54F18E9C52900F7D71F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 758EDB25E1C946F79AAE17EA /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Case/Documents/FacebookSDK,
+					/Users/Case/Desktop/Test_FB_2/FBproject,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FBproject/FBproject-Prefix.pch";
 				INFOPLIST_FILE = "FBproject/FBproject-Info.plist";
@@ -388,9 +487,15 @@
 		};
 		484ED55018E9C52900F7D71F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 758EDB25E1C946F79AAE17EA /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Case/Documents/FacebookSDK,
+					/Users/Case/Desktop/Test_FB_2/FBproject,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FBproject/FBproject-Prefix.pch";
 				INFOPLIST_FILE = "FBproject/FBproject-Info.plist";
@@ -460,6 +565,7 @@
 				484ED55018E9C52900F7D71F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		484ED55118E9C52900F7D71F /* Build configuration list for PBXNativeTarget "FBprojectTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +574,7 @@
 				484ED55318E9C52900F7D71F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
