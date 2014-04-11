@@ -12,6 +12,7 @@
 
 @interface MenuViewController : UIViewController <FBLoginViewDelegate>
 
-//@property (strong, nonatomic) IBOutlet FBLoginView *logout;
+@property (strong, nonatomic) IBOutlet FBLoginView *logout;
+
 
 @end

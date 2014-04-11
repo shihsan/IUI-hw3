@@ -9,13 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "ViewController.h"
-
+#import "MenuViewController.h"
+#import "MainViewController.h"
 
 @interface AppDelegate : UIResponder
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) ViewController *ViewController;
-
-
+@property (strong, nonatomic) MenuViewController *MenuViewController;
+@property (strong, nonatomic) MainViewController *MainViewController;
 
 @end

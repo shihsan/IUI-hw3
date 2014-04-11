@@ -21,7 +21,6 @@
 		484ED54118E9C52900F7D71F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484ED52318E9C52900F7D71F /* UIKit.framework */; };
 		484ED54918E9C52900F7D71F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 484ED54718E9C52900F7D71F /* InfoPlist.strings */; };
 		484ED54B18E9C52900F7D71F /* FBprojectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 484ED54A18E9C52900F7D71F /* FBprojectTests.m */; };
-		484ED55518E9C6C200F7D71F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484ED55418E9C6C200F7D71F /* FacebookSDK.framework */; };
 		485F258118F02D1B00504688 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 485F258018F02D1B00504688 /* TableViewController.m */; };
 		48F8E9B118F451C3006340AB /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F8E9AE18F451C3006340AB /* ECSlidingViewController.m */; };
 		48F8E9B218F451C3006340AB /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F8E9B018F451C3006340AB /* UIImage+ImageWithUIView.m */; };
@@ -62,7 +61,6 @@
 		484ED54618E9C52900F7D71F /* FBprojectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FBprojectTests-Info.plist"; sourceTree = "<group>"; };
 		484ED54818E9C52900F7D71F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		484ED54A18E9C52900F7D71F /* FBprojectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBprojectTests.m; sourceTree = "<group>"; };
-		484ED55418E9C6C200F7D71F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		485F257F18F02D1B00504688 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		485F258018F02D1B00504688 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		48F8E9AD18F451C3006340AB /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				484ED52218E9C52900F7D71F /* CoreGraphics.framework in Frameworks */,
-				484ED55518E9C6C200F7D71F /* FacebookSDK.framework in Frameworks */,
 				484ED52418E9C52900F7D71F /* UIKit.framework in Frameworks */,
 				484ED52018E9C52900F7D71F /* Foundation.framework in Frameworks */,
 				C45FA310A08C4166A2C7033B /* libPods.a in Frameworks */,
@@ -131,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				48F8E9BC18F45A74006340AB /* FacebookSDK.framework */,
-				484ED55418E9C6C200F7D71F /* FacebookSDK.framework */,
 				484ED51F18E9C52900F7D71F /* Foundation.framework */,
 				484ED52118E9C52900F7D71F /* CoreGraphics.framework */,
 				484ED52318E9C52900F7D71F /* UIKit.framework */,

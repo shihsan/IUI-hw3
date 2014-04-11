@@ -15,13 +15,15 @@
 @end
 
 @implementation MenuViewController
-//@synthesize logout;
+@synthesize logout;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        //logout = [[FBLoginView alloc] initWithReadPermissions:@[@"basic_info", @"user_events"]];
+
     }
     return self;
 }
@@ -40,6 +42,7 @@
     
     [self.slidingViewController setAnchorRightRevealAmount:200.0f];
     self.slidingViewController.underLeftWidthLayout = ECFullWidth;
+    
     
 }
 
@@ -65,7 +68,10 @@
 
 // Logged-out user experience
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
+    ////關閉此登出畫面
     [self dismissViewControllerAnimated:YES completion:^{}];
+    [self performSegueWithIdentifier: @"logout_segue" sender:self];
+
 }
 
 // Handle possible errors that can occur during login
