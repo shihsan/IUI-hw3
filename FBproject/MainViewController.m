@@ -63,6 +63,8 @@
     
     self.friendPickerController = nil;
     self.searchBar = nil;
+    
+    friendstr  = [[NSString alloc] init];
 
 }
 
@@ -98,6 +100,10 @@
                     initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    //This allows you to have multiple lines of text.
+    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.lineBreakMode = UILineBreakModeWordWrap;
+    
     if(indexPath.row == 0)
         cell.textLabel.text = [NSString stringWithFormat:@"Last Name: %@", Lname];
     else if(indexPath.row == 1)
@@ -108,10 +114,9 @@
         cell.textLabel.text = [NSString stringWithFormat:@"Gender: %@", gender];
     else if(indexPath.row == 4)
         cell.textLabel.text = [NSString stringWithFormat:@"Locale: %@", locale];
-    else if(indexPath.row == 5){
-        cell.textLabel.font = [UIFont systemFontOfSize:10];
+    else if(indexPath.row == 5)
         cell.textLabel.text = [NSString stringWithFormat:@"Link: %@", link];
-    }
+  
     
     
     
@@ -121,26 +126,11 @@
     
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 40;
-}
-
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     return @"Basic_info";
 }
-/*
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-}
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    
-}
-*/
 
 /* for fb */
 
@@ -284,15 +274,65 @@
 
 - (IBAction)postStatusUpdateWithShareDialog:(id)sender
 {
+    //test
+    
+    NSArray *permissionsNeeded = @[@"publish_actions"];
+    
+    // Request the permissions the user currently has
+    [FBRequestConnection startWithGraphPath:@"/me/permissions"
+                          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                              if (!error){
+                                  NSDictionary *currentPermissions= [(NSArray *)[result data] objectAtIndex:0];
+                                  NSMutableArray *requestPermissions = [[NSMutableArray alloc] initWithArray:@[]];
+                                  
+                                  // Check if all the permissions we need are present in the user's current permissions
+                                  // If they are not present add them to the permissions to be requested
+                                  for (NSString *permission in permissionsNeeded){
+                                      if (![currentPermissions objectForKey:permission]){
+                                          [requestPermissions addObject:permission];
+                                      }
+                                  }
+                                  
+                                  // If we have permissions to request
+                                  if ([requestPermissions count] > 0){
+                                      // Ask for the missing permissions
+                                      [FBSession.activeSession requestNewPublishPermissions:requestPermissions
+                                                                            defaultAudience:FBSessionDefaultAudienceFriends
+                                                                          completionHandler:^(FBSession *session, NSError *error) {
+                                                                              if (!error) {
+                                                                                  // Permission granted, we can request the user information
+                                                                                  [self makeRequestToShareLink];
+                                                                              } else {
+                                                                                  // An error occurred, handle the error
+                                                                                  // See our Handling Errors guide: https://developers.facebook.com/docs/ios/errors/
+                                                                                  NSLog(@"%@", error.description);
+                                                                              }
+                                                                          }];
+                                  } else {
+                                      // Permissions are present, we can request the user information
+                                      [self makeRequestToShareLink];
+                                  }
+                                  
+                              } else {
+                                  // There was an error requesting the permission information
+                                  // See our Handling Errors guide: https://developers.facebook.com/docs/ios/errors/
+                                  NSLog(@"%@", error.description);
+                              }
+                          }];
+    //test end
+    
+    /*
+    NSString *chung = @"100004912511566";
     [self invokepermissionforpublish];
     // Put together the dialog parameters
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                   /*@"friendsarray", @"friends",
+                                   chung, @"to",
+                                   @"friendsarray", @"friends",
                                    @"Sharing Tutorial", @"name",
                                    @"Build great social apps and get more installs.", @"caption",
                                    @"Allow your users to share stories on Facebook from your app using the iOS SDK.", @"description",
                                    @"https://developers.facebook.com/docs/ios/share/", @"link",
-                                   @"http://i.imgur.com/g3Qc1HN.png", @"picture",*/
+                                   @"http://i.imgur.com/g3Qc1HN.png", @"picture",
                                    nil];
 
     
@@ -324,6 +364,7 @@
                                                       }
                                                   }
                                               }];
+     */
     /*
     // Check if the Facebook app is installed and we can present the share dialog
     FBShareDialogParams *params = [[FBShareDialogParams alloc] init];
@@ -379,6 +420,44 @@
     }*/
 }
 
+//Test
+- (void)makeRequestToShareLink{
+    
+    // NOTE: pre-filling fields associated with Facebook posts,
+    // unless the user manually generated the content earlier in the workflow of your app,
+    // can be against the Platform policies: https://developers.facebook.com/policy
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    if(friendstr != nil)
+        [params setValue:friendstr forKey:@"to"];
+    
+    /*NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                   friendstr,@"to",
+                                   nil];*/
+    
+    [FBWebDialogs presentFeedDialogModallyWithSession:[FBSession activeSession]
+                                           parameters:params
+                                              handler:
+     ^(FBWebDialogResult result, NSURL *resultURL, NSError *error){
+         
+         
+         if (!error) {
+             // Link posted successfully to Facebook
+             NSLog(@"result: %@", resultURL);
+         } else {
+             // An error occurred, we need to handle the error
+             // See: https://developers.facebook.com/docs/ios/errors
+             NSLog(@"%@", error.description);
+         }
+         
+     }];
+}
+
+//Test
+
+
+
+
+
 // A function for parsing URL parameters
 - (NSDictionary*)parseURLParams:(NSString *)query {
     NSArray *pairs = [query componentsSeparatedByString:@"&"];
@@ -397,6 +476,8 @@
 
 // Pick Friends
 - (IBAction)pickFriendsButtonClick:(id)sender {
+    friendstr = [[NSString alloc]init];
+    
     // FBSample logic
     // if the session is open, then load the data for our view controller
     if (!FBSession.activeSession.isOpen) {
@@ -423,6 +504,7 @@
     if (self.friendPickerController == nil) {
         // Create friend picker, and get data loaded into it.
         self.friendPickerController = [[FBFriendPickerViewController alloc] init];
+        self.friendPickerController.allowsMultipleSelection = NO;
         self.friendPickerController.title = @"Pick Friends";
         self.friendPickerController.delegate = self;
     }
@@ -441,15 +523,18 @@
 
 - (void)facebookViewControllerDoneWasPressed:(id)sender {
     NSMutableString *text = [[NSMutableString alloc] init];
+    NSMutableString *fid = [[NSMutableString alloc] init];
     
     // we pick up the users from the selection, and create a string that we use to update the text view
     // at the bottom of the display; note that self.selection is a property inherited from our base class
     for (id<FBGraphUser> user in self.friendPickerController.selection) {
-        if ([text length]) {
+        /*if ([text length]) {
             [text appendString:@", "];
-        }
+        }*/
         [text appendString:user.name];
+        [fid appendString:user.id];
     }
+    friendstr = fid;
     [self fillTextBoxAndDismiss:text.length > 0 ? text : @"<None>"];
 }
 
@@ -457,7 +542,7 @@
     [self fillTextBoxAndDismiss:@"<Cancelled>"];
 }
 
-- (void)fillTextBoxAndDismiss:(NSString *)text {
+- (void)fillTextBoxAndDismiss:(NSString *)text{
     self.selectedFriends.text = text;
     [self dismissViewControllerAnimated:YES completion:NULL];
 }

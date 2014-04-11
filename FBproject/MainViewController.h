@@ -15,7 +15,7 @@
     NSMutableArray *list;
     NSString *Fname, *Lname, *user_id, *gender, *locale, *link;
     NSInteger info_count;
-    NSMutableArray *friendsarray;
+    NSString *friendstr;
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *Mytable;
